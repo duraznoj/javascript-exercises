@@ -1,5 +1,8 @@
 const leapYears = function(inYear) {
-  if(inYear % 4 === 0) {
+  //much better solution from TOP
+  return inYear % 4 == 0 && (inYear % 100 !== 0 || inYear % 400 === 0);
+
+  /*if(inYear % 4 === 0) {
     if(inYear % 100 === 0 && inYear % 400 !== 0) {
       //not leap year
       return false;
@@ -8,7 +11,7 @@ const leapYears = function(inYear) {
     }
   } else {
     return false;
-  }
+  }*/
 };
 
 // Do not edit below this line
